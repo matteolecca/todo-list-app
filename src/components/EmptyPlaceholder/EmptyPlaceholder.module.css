@@ -1,0 +1,17 @@
+.EmptyPlaceholder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    height: calc(100vh - var(--topbar-height));
+}
+.EmptyPlaceholderContainer{
+
+}
+.EmptyPlaceholder img{
+    width: 50%;
+    margin: 0 auto;
+}

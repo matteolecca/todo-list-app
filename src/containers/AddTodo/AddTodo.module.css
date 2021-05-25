@@ -1,0 +1,86 @@
+.AddTodo{
+    overflow-y: auto;
+    max-width: 500px;
+    min-width: 500px;
+}
+.Title {
+    width: 100%;
+    text-align: start;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(200, 200, 200, 0.5);
+    padding: 10px 0;
+    background-color: var(--second-background);
+    border-radius: 10px 10px 0 0 ;
+    -webkit-border-radius: 10px 10px 0 0 ;
+    -moz-border-radius: 10px 10px 0 0 ;
+    -ms-border-radius: 10px 10px 0 0 ;
+    -o-border-radius: 10px 10px 0 0 ;
+}
+.Title div{
+    width: 95%;
+    margin: 0 auto;
+    color: var(--main-color);
+}
+.AddTodoListItems {
+    width: 95%;
+    margin: 5px auto;
+    display: grid;
+    grid-gap: 10px;
+}
+
+.AddTaskContainer {
+    width: 95%;
+    margin: 5px auto;
+    padding: 10px 0;
+    border-top: 1px solid rgba(200, 200, 200, 0.5);
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+
+.ButtonsContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ImportantIcon:hover {
+    color: var(--secondary-background);
+}
+
+.importantSelected {
+    color: var(--secondary-background);
+}
+
+.ScheduledIcon :hover {
+    color: #2a9df4;
+}
+
+.TodayIcon:hover {
+    color: #b5e550;
+}
+
+.IconsContainer {
+    color: #ccc;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.IconsContainer svg:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+@media screen and ( max-width: 768px) {
+   .AddTodo{
+       min-width: 100%;
+       width: 100%;
+   }
+}

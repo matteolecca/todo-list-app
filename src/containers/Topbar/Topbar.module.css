@@ -1,0 +1,56 @@
+.Topbar{
+    height: var(--topbar-height);
+    width: 100vw;
+    background-color: var(--secondary-background);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.TopbarContainer{
+    width: calc(100% - 25px);
+    margin:  0 auto;
+    display: flex;
+    align-items: center;
+    color : #fff;
+    justify-content: space-between;
+    position: relative;
+    
+}
+.MainIconContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    color : #fff;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+.MainIconContainer :nth-child(1){
+    margin-right: 10px;
+    width: 20px;
+}
+.MainIconContainer label{
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.ButtonIcon{
+
+}
+.ButtonIcon:hover{
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}

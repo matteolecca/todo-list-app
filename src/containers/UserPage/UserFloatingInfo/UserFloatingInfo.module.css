@@ -1,0 +1,39 @@
+.UserFloatingInfo{
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background-color: var(--second-background);
+    width: 250px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 0 3px 5px 1px var(--backdrop-color);
+    color: var(--main-color);
+    z-index: 201;
+    animation: display 0.5s forwards;
+    -webkit-animation: display 0.5s forwards;
+}
+.InfoContainer{
+    width: 90%;
+    margin: 25px auto;
+}
+.Info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.Info button,
+.Info a{
+    width: 100%;
+}
+@keyframes display{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

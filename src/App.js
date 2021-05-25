@@ -1,25 +1,89 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './containers/Home/Home';
+import Topbar from './containers/Topbar/Topbar';
+import { connect } from 'react-redux';
+import Login from './containers/Auth/Login/Login';
+import React, { useEffect } from 'react';
+import { CHECK_AUTH, UNAUTH } from './redux/actions';
+import { Redirect, Route, Switch,  } from 'react-router-dom'
+import LoadingPage from './components/LoadingPage/LoadingPage';
+import Signup from './containers/Auth/Signup/Signup';
+import PasswordReset from './containers/Auth/PasswordReset/PasswordReset';
+import UserPage from './containers/UserPage/UserPage';
+import Popup from './components/Popup/Popup';
 
-function App() {
+const App = (props) => {
+  const { mode, checkAuth, checkingAuth, auth, unauth } = props
+
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    if (token) {checkAuth(token)}
+    else {unauth() }
+  }, [checkAuth, unauth])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={mode}>
+      <Switch>
+        <Route exact path="/login">
+          {
+            auth ? <Redirect to="/" />
+              : <Login />
+          }
+        </Route>
+        <Route exact path="/signup">
+          {
+            auth ? <Redirect to="/" />
+              : <Signup />
+          }
+        </Route>
+        <Route exact path="/account">
+          {
+          checkingAuth ? <LoadingPage />
+            :
+            auth ? 
+            <React.Fragment>
+              <UserPage />
+            </React.Fragment>
+              : <Redirect to="/login" />
+          }
+        </Route>
+        <Route exact path="/resetpwd">
+          {
+            auth ? <Redirect to="/" />
+              : <PasswordReset />
+          }
+        </Route>
+        <Route exact path="/">
+          {
+          checkingAuth ? <LoadingPage />
+            :
+            auth ? 
+            <React.Fragment>
+              <Home />
+              <Topbar />
+            </React.Fragment>
+              : <Redirect to="/login" />
+          }
+        </Route>
+        
+      </Switch>
+     <Popup/> 
     </div>
   );
 }
 
-export default App;
+const State = state => {
+  return {
+    mode: state.sidebarReducer.mode,
+    checkingAuth: state.authReducer.checking,
+    auth: state.authReducer.auth,
+   
+  }
+}
+const Actions = dispatch => {
+  return {
+    checkAuth: (token) => dispatch({ type: CHECK_AUTH, token: token }),
+    unauth : ()=> dispatch({type : UNAUTH})
+  }
+}
+export default connect(State, Actions)(App);

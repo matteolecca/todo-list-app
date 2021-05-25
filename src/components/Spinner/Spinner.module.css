@@ -1,0 +1,18 @@
+.spinner{
+  height: 20px !important;
+  width: 20px !important;
+}
+.spinner svg{
+  color: var(--secondary-background);
+}
+.big{
+  width: 60px !important;
+  height: 60px !important;
+}
+.absolutepos div{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+
+}
+

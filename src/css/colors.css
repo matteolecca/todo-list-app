@@ -1,0 +1,9 @@
+.sec-color-icon{
+    color : var(--secondary-background);
+}
+.green-color-icon{
+    color : #b5e550;
+}
+.blue-color{
+    color : rgb(127, 166, 248);
+}

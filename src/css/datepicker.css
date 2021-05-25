@@ -1,0 +1,39 @@
+@media screen and ( max-width : 520px){
+    .MuiPickersBasePicker-container.MuiPickersBasePicker-containerLandscape{
+        display: block !important;
+    }
+    .MuiToolbar-root.MuiToolbar-regular.MuiPickersToolbar-toolbar.MuiPickersDatePickerRoot-toolbar.MuiPickersDatePickerRoot-toolbarLandscape.MuiPickersToolbar-toolbarLandscape.MuiToolbar-gutters{
+        max-width: 100% !important;
+    }
+    .MuiPickersBasePicker-pickerView.MuiPickersBasePicker-pickerViewLandscape{
+        max-width: 100% !important;
+    }
+}
+.MuiPickersToolbar-toolbar,
+.MuiPickersDay-daySelected,
+.MuiSwitch-colorPrimary.Mui-checked + .MuiSwitch-track{
+    background-color: var(--secondary-background) !important;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.MuiPickersStaticWrapper-staticWrapperRoot{
+    background-color: var(--main-background) !important;
+}
+.MuiSwitch-colorPrimary.Mui-checked,
+.MuiPickersDay-current{
+    color: var(--secondary-background) !important;
+}
+
+.MuiPickersBasePicker-pickerView.MuiPickersBasePicker-pickerViewLandscape{
+    background-color: var(--main-background) !important;
+    color: var(--main-color) !important;
+}
+.MuiPickersBasePicker-pickerView.MuiPickersBasePicker-pickerViewLandscape span{
+    color: var(--main-color) !important;
+}
+.MuiPickersCalendarHeader-switchHeader button{
+    background-color: var(--second-background) !important;
+}

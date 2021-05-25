@@ -1,0 +1,36 @@
+.Modal{
+    background-color: var(--main-background);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    z-index: var(--modal-index);
+    min-height: 200px;
+    min-width: 300px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+@media screen and ( max-width : 768px){
+    
+}
+@media screen and ( max-width : 520px) {
+    .Modal{
+        width: 90%;
+        padding: 0;
+    }
+    .bottom{
+        width: 95%;
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        right: 0;
+        top: calc(var(--topbar-height) + 50px);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+    }
+}

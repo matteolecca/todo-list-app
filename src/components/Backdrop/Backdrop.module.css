@@ -1,0 +1,56 @@
+.Backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--backdrop-color);
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: all 0.5s;
+    z-index: var(--backdrop-index);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: var(--backdrop-index);
+}
+.noopacity{
+    background-color: var(--main-background);
+}
+.opened{
+    animation: open 0.5s forwards;
+}
+.closed{
+    animation: close 0.5s forwards;
+}
+.mobile{
+    display: none;
+}
+.bottom{
+}
+.transparent{
+    background-color: transparent;
+    opacity: 0;
+}
+@media screen and (max-width : 768px){
+    .mobile{
+        display: initial;
+        top: var(--topbar-height);
+        z-index: 198;
+    }
+}
+@keyframes open{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes close{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}

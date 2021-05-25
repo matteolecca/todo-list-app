@@ -1,0 +1,34 @@
+.FloatingButton{
+    position: absolute;
+    right: 5%;
+    bottom: 50px;
+    width: 50px !important;
+    height: 50px !important;
+    background-color: var(--secondary-background);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    box-shadow: 0 0 25px 1px var(--backdrop-color);
+}
+
+.FloatingButton:hover{
+  cursor: pointer;
+  background-color: #fff;
+  color: var(--secondary-background);
+  transition: all 0.5s;
+  transform:translateX(0)translateY(0)scaleX(1.2)scaleY(1.2)rotate(0deg)skewX(0deg)skewY(0deg);
+  -webkit-transform:translateX(0)translateY(0)scaleX(1.2)scaleY(1.2)rotate(0deg)skewX(0deg)skewY(0deg);
+  -moz-transform:translateX(0)translateY(0)scaleX(1.2)scaleY(1.2)rotate(0deg)skewX(0deg)skewY(0deg);
+  -ms-transform:translateX(0)translateY(0)scaleX(1.2)scaleY(1.2)rotate(0deg)skewX(0deg)skewY(0deg);
+  -o-transform:translateX(0)translateY(0)scaleX(1.2)scaleY(1.2)rotate(0deg)skewX(0deg)skewY(0deg);
+}
+
+.FloatingButton:active{
+    color: var(--secondary-background);
+    background-color: var(--secondary-background);
+}

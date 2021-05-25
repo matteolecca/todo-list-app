@@ -1,0 +1,166 @@
+.Projects {
+    margin-top: 20px;
+    overflow-x: hidden;
+}
+
+.Project:hover{
+    cursor: pointer;
+    background-color: var(--secondary-background);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.Project{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start !important;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 5px 0;
+}
+.ProjectsTitle,
+.ProjectsTitle div {
+    color: var(--main-color);
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    text-transform: capitalize;
+    justify-content: space-between;
+}
+.DeleteIcon{
+    color: var(--secondary-background);
+    align-self: center;
+    padding: 2px;
+    margin-right: 5px;
+}
+.DeleteIcon:hover{
+    cursor: pointer;
+    color: var(--tertiary-background);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.DeleteIcon:active{
+    color: var(--main-background);
+}
+.ProjectsContainer {
+    width: 100%;
+    display: block;
+    overflow-y: auto;
+}
+
+
+.expandIcon:hover{
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.arrowSelected {
+    animation: rotateOpen 0.5s forwards;
+    -webkit-animation: rotateOpen 0.5s forwards;
+}
+
+.arrowUnselected{
+    animation: rotateClose 0.5s forwards ease-out;
+    -webkit-animation: rotateClose 0.5s forwards ease-out;
+} 
+.todosSelected {
+    animation: expandTodos 1s forwards ;
+    -webkit-animation: expandTodos 1s forwards ;
+}
+
+.todosUnselected {
+    animation: reduceTodos 0.5s forwards ease-out ;
+    -webkit-animation: reduceTodos 0.5s forwards ease-out ;
+}
+.AddTodoListRow{
+    font-weight: 500;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    margin-bottom: 15px;
+    grid-gap: 10px;
+    gap: 10px;
+    text-transform: capitalize;
+    color: rgb(138, 138, 138);
+
+}
+.AddTodoListRow:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+.AddoTodoIcon{
+    color: var(--secondary-background);
+}
+
+@keyframes expandTodos {
+    from{
+        max-height: 0;
+    }
+    to{
+        max-height: 1000px;
+    }
+}
+@keyframes reduceTodos {
+    from{
+        max-height: 1000px;
+    }
+    to{
+        max-height: 0;
+    }
+}
+@keyframes rotateClose {
+    from {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+}
+}
+@keyframes rotateOpen {
+    from {
+        transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+}
+    to {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+   
+}
+
+@media screen and (max-width : 768px){
+    .ProjectsContainer
+    {
+        margin: 5px 15px;
+    }
+    .AddTodoListRow{
+        margin-left: 5px;
+    }
+}

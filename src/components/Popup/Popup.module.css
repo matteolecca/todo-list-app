@@ -1,0 +1,88 @@
+.Popup{
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    min-width: 50vw;
+    transform: translate(-50%,-200%);
+    background-color: var(--main-color) !important;
+    color: var(--main-background) !important;
+    border-radius: 10px;
+    width: 20vw;
+    height: 100px;
+}
+.PopupContainer{
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.messageRow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--main-background) !important;
+}
+.messageRow :nth-child(1){
+    margin-right: 5px;
+}
+.closeIcon{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.closeIcon:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+.success{
+    background-color: rgb(163, 209, 110);
+}
+.error{
+    background-color: rgb(223, 18, 18) !important;
+}
+.opened{
+    animation: openpopup 0.3s ease-out forwards;
+}
+.closed{
+    animation: closepopup 0.3s ease-out forwards;
+}
+@keyframes openpopup{
+    60%{
+        transform: translate( -50%, 40%);  
+    }
+    70%{
+        transform: translate( -50%, 30%);  
+    }
+    80%{
+        transform: translate( -50%, 20%);  
+    }
+    90%{
+        transform: translate( -50%, 10%);  
+    }
+    100%{
+        transform: translate( -50%, 0);  
+    }
+}
+
+@keyframes closepopup{
+    0%{
+        transform: translate( -50%, 0);  
+    }
+    20%{
+        transform: translate( -50%, 40%);  
+    }
+    30%{
+        transform: translate( -50%, 20%);  
+    }
+    40%{
+        transform: translate( -50%, 10%);  
+    }
+    50%{
+        transform: translate( -50%, 0%);  
+    }
+    100%{
+        transform: translate( -50%, -200%);  
+    }
+}
+

@@ -1,0 +1,11 @@
+.ConfirmPopup{
+    width: 100%;
+    margin-bottom: 20px ;
+    color: var(--main-color);
+    text-align: center;
+}
+.ButtonsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

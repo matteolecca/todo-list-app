@@ -1,0 +1,53 @@
+
+.UserPage img {
+    display: flex;
+    margin: 100px auto;
+    width: 100px;
+}
+.UserPage{
+    min-height: 100vh;
+    margin-top: var(--topbar-height);
+    color: var(--main-color);
+}
+
+
+.UserData{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap : 10px;
+    color: var(--main-color);
+}
+.UserDataContainer{
+    width: 100%;
+    margin : 0 auto;
+    padding: 0 10px;
+}
+.UserDatas .UserDataContainer:last-child{
+    border-left: 1px solid rgba(200, 200, 200, 0.5);
+}
+.UserDatas{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: flex-end;
+    width: 90%;
+    margin: 0 auto;
+    min-height: 250px;
+}
+@media screen and (max-width : 768px){
+    .UserPage img{
+        width: 75px;
+    }
+    .UserDatas{
+        display: block;
+        margin-top: 0;
+    }
+    .UserDataContainer{
+        justify-content: initial;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .UserDatas .UserDataContainer:last-child{
+        border-left: none;
+    }
+}

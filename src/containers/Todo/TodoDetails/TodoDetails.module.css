@@ -1,0 +1,28 @@
+.TodoDetails{
+    width: 100%;
+    height: var(--modal-min-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 201;
+}
+.DetailsContainer{
+    width: 80%;
+    display: grid;
+    row-gap: 20px;
+}
+.DetailsRow{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Title{
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.ImportantIcon{
+    color : var(--secondary-background);
+}
+.CalendarIcon{
+    color : #b5e550;
+}

@@ -1,0 +1,162 @@
+.Button {
+    color: #ffffff;
+    background-color: var(--secondary-background);
+    border: none;
+    height: 100%;
+    padding: 0;
+    border-radius: 5px;
+    transition: all 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 700;
+    min-width: 100px;
+    min-height: 40px;
+    position: relative;
+}
+
+.big {
+    min-width: 200px;
+}
+
+.Button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.fullwidth {
+    width: 100%;
+}
+
+.shake:active {
+    animation: popup 0.5s forwards;
+    -webkit-animation: popup 0.5s forwards;
+}
+
+.Button a {
+    color: #ffffff;
+}
+
+.green {
+    background-color: var(--main-background);
+}
+
+.dark {
+    background-color: #333;
+    color: #fff;
+}
+
+.red {
+    background-color: #fc6f6f;
+}
+
+.gray {
+    background: #f3f3f3;
+    color: #333;
+}
+
+.Spinner {
+    height: 20px !important;
+    width: 20px !important;
+}
+
+.Button svg {
+    color: #fff;
+}
+
+.InputButton {
+    border-radius: 0 5px 5px 0;
+    -webkit-border-radius: 0 5px 5px 0;
+    -moz-border-radius: 0 5px 5px 0;
+    -ms-border-radius: 0 5px 5px 0;
+    -o-border-radius: 0 5px 5px 0;
+    height: 37px;
+    border: 1px solid rgba(200, 200, 200, 0.5);
+}
+
+.Button:disabled {
+    opacity: 0.3;
+}
+
+.Button:disabled:hover {
+    cursor: not-allowed;
+}
+.Button:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main-background);
+    opacity: 0.3;
+    transition: all .5s;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+
+.Button:hover svg {
+    animation: rotateIcon 0.5s forwards;
+    -webkit-animation: rotateIcon 0.5s forwards;
+}
+.Button:enabled:hover:after{
+    width: 100%;
+}
+
+
+@keyframes rotateIcon {
+    from {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+}
+    to {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+}
+}
+@keyframes popup {
+    0% {
+        transform: translateX(-5px);
+        -webkit-transform: translateX(-5px);
+        -moz-transform: translateX(-5px);
+        -ms-transform: translateX(-5px);
+        -o-transform: translateX(-5px);
+    }
+    25% {
+        transform: translateX(5%);
+        -webkit-transform: translateX(5%);
+        -moz-transform: translateX(5%);
+        -ms-transform: translateX(5%);
+        -o-transform: translateX(5%);
+    }
+    50% {
+        transform: translateY(-5px);
+        -webkit-transform: translateY(-5px);
+        -moz-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        -o-transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(5px);
+        -webkit-transform: translateY(5px);
+        -moz-transform: translateY(5px);
+        -ms-transform: translateY(5px);
+        -o-transform: translateY(5px);
+    }
+}
+

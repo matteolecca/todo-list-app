@@ -1,0 +1,43 @@
+
+.AuthForm {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    row-gap: 10px;
+}
+.ErrorMessage{
+    height: 40px;
+    margin: 0;
+    text-align: center;
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: smaller;
+}
+
+.AuthForm button{
+    height: 65px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.ButtonsContainer{
+    display: flex;
+    justify-content: space-between;
+    color: var(--main-color);
+}
+.ButtonsContainer a{
+    color: var(--main-color);
+    text-decoration: none;
+}
+.ButtonsContainer a:hover{
+    color: var(--tertiary-background);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}

@@ -1,0 +1,66 @@
+.UserData {
+    width: 90%;
+    margin: 25px auto;
+    display: grid;
+    align-items: center;
+    height: 50px;
+    grid-template-columns: 30% 50% 20%;
+    justify-content: flex-end;
+}
+
+.UserData div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.UserData svg {
+    justify-self: flex-end;
+    color: var(--main-color);
+}
+
+.UserData svg:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.UserData input {
+    flex: 1 1;
+    height: 100%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.rotate {
+    animation: startRotate 1s infinite linear;
+    -webkit-animation: startRotate 1s infinite linear;
+}
+
+@keyframes startRotate {
+    from {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-359deg);
+        -webkit-transform: rotate(-359deg);
+        -moz-transform: rotate(-359deg);
+        -ms-transform: rotate(-359deg);
+        -o-transform: rotate(-359deg);
+    }
+}
+
+@media screen and ( max-width: 768px) {
+    .UserData {
+        grid-template-columns: 100%;
+    }
+    .UserData input {
+        height: 50px;
+    }
+}

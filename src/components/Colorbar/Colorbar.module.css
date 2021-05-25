@@ -1,0 +1,36 @@
+.Colorbar{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Colorbarcircle{
+    width: 2em;
+    height: 2em;
+    border-radius: 1em;
+    transition: all 0.5s ease-out;
+    outline: none;
+    border: 1px solid #ffffff;
+}
+.Colorbarcircle:hover{
+    cursor: pointer;
+    filter: brightness(0.8);
+}
+.Colorcontainer{
+    display: inline-flex;
+    justify-content: space-between;
+}
+.title{
+    white-space: nowrap;
+    text-align: left;
+    color: var(--secondary-color);
+}
+
+@media screen and (max-width : 768px){
+    
+}
+@media screen and ( max-width : 360px){
+    .Colorbar{
+        display: grid;
+        justify-content: center;
+    }
+}

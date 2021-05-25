@@ -1,0 +1,37 @@
+.Mode{
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 100%;
+    color: var(--main-color);
+}
+.Mode label{
+    text-transform: capitalize;
+}
+.Mode button{
+    width: 100%;
+    background-color: var(--tertiary-background);
+    margin: 20px 0;
+}
+
+.ModeButton{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ModeButton div{
+    display: flex;
+    align-items: center;
+    gap : 10px;
+}
+.light{
+    color: var(--main-color);
+}
+.dark{
+    color : var(--main-color);
+}
+.ModeTitle{
+    font-weight: 600;
+}

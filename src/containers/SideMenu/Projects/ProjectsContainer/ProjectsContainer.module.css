@@ -1,0 +1,114 @@
+.ProjectsTitle{
+    color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    margin-bottom: 10px;
+    padding: 0 ;
+}
+ .ExpandContainer{
+    flex: 1 1;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+
+}
+.SkeletonContainer{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    grid-gap: 10px;
+    padding: 10px;
+    gap: 10px;
+    text-transform: capitalize;
+}
+.ExpandContainer:hover{
+    cursor: pointer;
+    opacity: 0..5;
+}
+.NewProjectIcon{
+    margin-right: 10px;
+    color : var(--secondary-background);
+    padding : 2px;
+}
+.NewProjectIcon:hover{
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: var(--secondary-background);
+    color: var(--main-background);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.NewProjectInput{
+    width: 95%;
+    margin: 20px 0 0 5% ;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.ExpandableContainer{
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
+    -webkit-transition: max-height 0.5s ease-out;
+    -moz-transition: max-height 0.5s ease-out;
+    -ms-transition: max-height 0.5s ease-out;
+    -o-transition: max-height 0.5s ease-out;
+}
+.expanded{
+    max-height: 1000px;
+    transition: max-height 1s ease-in;
+    -webkit-transition: max-height 1s ease-in;
+    -moz-transition: max-height 1s ease-in;
+    -ms-transition: max-height 1s ease-in;
+    -o-transition: max-height 1s ease-in;
+}
+.opened{
+    animation: rotateOpen 1s forwards;
+    -webkit-animation: rotateOpen 1s forwards;
+}
+.closed{
+    animation: rotateClose 1s forwards;
+    -webkit-animation: rotateClose 1s forwards;
+}
+@keyframes rotateClose {
+    from {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+}
+}
+@keyframes rotateOpen {
+    from {
+        transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+}
+    to {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+   
+}
