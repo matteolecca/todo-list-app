@@ -21,7 +21,7 @@
     /* box-shadow: 0 0 20px 5px var(--shadow); */
 }
 
-.AuthContainer img {
+.AuthContainer img, .AuthContainer link {
     width: 25%;
     margin: 0 auto;
 }
