@@ -4,6 +4,7 @@ import './index.css';
 import './css/fonts.css';
 import './css/colors.css';
 import './css/datepicker.css';
+import './css/transition.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createStore, applyMiddleware, combineReducers, compose } from 'redux'
