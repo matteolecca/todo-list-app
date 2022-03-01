@@ -3,7 +3,7 @@ import axios from 'axios'
 export const cancelToken = axios.CancelToken
 
 export const instance = axios.create({
-    baseURL: 'https://matteolecca-todo-list-server.herokuapp.com/',
+    baseURL: 'http://localhost:8080',
     withCredentials : true,
     sameSite : 'none',
 })
